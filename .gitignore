@@ -1,0 +1,12 @@
+# Carpeta de datos pesados
+data/
+optim_results/
+
+# Python (si hay)
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Otros
+.DS_Store
