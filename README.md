@@ -6,6 +6,7 @@ Este proyecto tiene como objetivo desarrollar y evaluar modelos de aprendizaje a
 
 ## ESTRUCTURA DEL PROYECTO
 
+```text
 .
 ├── data/
 │   ├── metilacion_nm.csv                # Base de datos principal (sin faltantes)
@@ -39,6 +40,8 @@ Este proyecto tiene como objetivo desarrollar y evaluar modelos de aprendizaje a
 │
 ├── results/                             # Resultados del gridsearch
 ├── optim_results/                       # Resultados de los modelos óptimos
+
+```
 
 ---
 
