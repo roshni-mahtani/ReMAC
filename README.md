@@ -3,7 +3,7 @@
 Accurate diagnosis of spitzoid tumors (ST) is critical to ensure a favorable prognosis and to avoid both under- and over-treatment. Epigenetic data, particularly DNA methylation, provide a valuable source of information for this task. However, prior studies assume complete data, an unrealistic setting as methylation profiles frequently contain missing entries due to limited coverage and experimental artifacts. Our work challenges these favorable scenarios and introduces ReMAC, an extension of ReMasker designed to tackle classification tasks on high-dimensional data under complete and incomplete regimes. Evaluation on real clinical data demonstrates that ReMAC achieves strong and robust performance compared to competing classification methods in the stratification of ST.
 
 <p align="center">
-  <img src="figures/main_figure.png" alt="Main figure" width="600"/>
+  <img src="figures/main_figure.png" alt="Main figure" width="1000"/>
 </p>
 
 ---
