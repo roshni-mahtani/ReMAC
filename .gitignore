@@ -9,7 +9,7 @@ __pycache__/
 .env
 
 # Notebooks used to generate images
-figures/*.ipynb
+figures/*.py
 
 # Other files
 .DS_Store
