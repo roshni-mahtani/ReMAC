@@ -1,14 +1,23 @@
 # Masked Autoencoder Joint Learning for Robust Spitzoid Tumor Classification
 
-TL;DR
+### TL;DR
 Accurate diagnosis of spitzoid tumors (ST) is critical to ensure a favorable prognosis and to avoid both under- and over-treatment. Epigenetic data, particularly DNA methylation, provide a valuable source of information for this task. However, prior studies assume complete data, an unrealistic setting as methylation profiles frequently contain missing entries due to limited coverage and experimental artifacts. Our work challenges these favorable scenarios and introduces ReMAC, an extension of ReMasker designed to tackle classification tasks on high-dimensional data under complete and incomplete regimes. Evaluation on real clinical data demonstrates that ReMAC achieves strong and robust performance compared to competing classification methods in the stratification of ST.
 
 <p align="center">
   <img src="figures/main_figure.png" alt="Main figure" width="1000"/>
 </p>
 
-📜 <span style="color:red">*Submited to CASEIB'25*</span> \
-<span style="color:blue">*Ilán Carretero, Roshni Mahtani, Silvia Perez-Deben, José Francisco González-Muñoz, Carlos Monteagudo, Valery Naranjo, Rocío del Amor*</span>
+*<a href="https://scholar.google.com/citations?user=N8Y3mGAAAAAJ&hl=es" style="color:blue;">Ilán Carretero</a>, 
+<a href="https://www.linkedin.com/in/roshni-mahtani-vashdev-165aa7225/?locale=en_US&trk=people-guest_people_search-card" style="color:blue;">Roshni Mahtani</a>, 
+<a href="https://www.incliva.es/" style="color:blue;">Silvia Perez-Deben</a>, 
+<a href="https://www.incliva.es/" style="color:blue;">José Francisco González-Muñoz</a>, 
+<a href="https://www.incliva.es/" style="color:blue;">Carlos Monteagudo</a>, 
+<a href="https://scholar.google.com/citations?user=jk4XsG0AAAAJ&hl=es" style="color:blue;">Valery Naranjo</a>, 
+<a href="https://scholar.google.com/citations?user=CPCZPNkAAAAJ&hl=es" style="color:blue;">Rocío del Amor</a>*
+
+📜 <span style="color:red"><em>Submitted to <a href="https://caseib.es/2025/" style="color:red;">CASEIB'25</a></em></span> \
+
+
 ---
 
 ## PROJECT STRUCTURE
