@@ -134,6 +134,5 @@ Scripts must be run from the folder where they are located.
 
 ---
 
-The authors sincerely thank the researchers of the *ReMasker* method for sharing their code, available at: [https://github.com/tydusky/remasker](https://github.com/tydusky/remasker)
-
+The authors sincerely thank the researchers of the *ReMasker* method for sharing their code, available at: [https://github.com/tydusky/remasker](https://github.com/alps-lab/remasker)
 
