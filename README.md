@@ -1,22 +1,25 @@
 # Masked Autoencoder Joint Learning for Robust Spitzoid Tumor Classification
 
+TL;DR
 Accurate diagnosis of spitzoid tumors (ST) is critical to ensure a favorable prognosis and to avoid both under- and over-treatment. Epigenetic data, particularly DNA methylation, provide a valuable source of information for this task. However, prior studies assume complete data, an unrealistic setting as methylation profiles frequently contain missing entries due to limited coverage and experimental artifacts. Our work challenges these favorable scenarios and introduces ReMAC, an extension of ReMasker designed to tackle classification tasks on high-dimensional data under complete and incomplete regimes. Evaluation on real clinical data demonstrates that ReMAC achieves strong and robust performance compared to competing classification methods in the stratification of ST.
 
 <p align="center">
   <img src="figures/main_figure.png" alt="Main figure" width="1000"/>
 </p>
 
+📜 <span style="color:red">*Submited to CASEIB'25*</span> \
+<span style="color:blue">*Ilán Carretero, Roshni Mahtani, Silvia Perez-Deben, José Francisco González-Muñoz, Carlos Monteagudo, Valery Naranjo, Rocío del Amor*</span>
 ---
 
-## ESTRUCTURA DEL PROYECTO
+## PROJECT STRUCTURE
 
 ```text
 .
 ├── data/
-│   ├── metilacion_nm.csv                # Base de datos principal (sin faltantes)
-│   ├── labels.csv                       # Etiquetas de clase (nevus / melanoma)
-│   ├── latent_autoencoder.csv           # Mejor representación latente obtenida
-│   └── metilacion_with_missing/         # Datos con valores faltantes generados aleatoriamente (con seed=5)
+│   ├── metilacion_nm.csv                # Main database (no missing values)
+│   ├── labels.csv                       # Class labels (nevus / melanoma)
+│   ├── latent_autoencoder.csv           # Best latent representation obtained
+│   └── metilacion_with_missing/         # Data with randomly generated missing values (seed=5)
 │       ├── X_missing5_nan.csv
 │       ├── X_missing10_nan.csv
 │       ├── X_missing20_nan.csv
@@ -24,12 +27,12 @@ Accurate diagnosis of spitzoid tumors (ST) is critical to ensure a favorable pro
 │       └── X_missing50_nan.csv
 │
 ├── src/
-│   ├── deep_learning/                   # Modelos y utilidades de deep learning
-│   ├── machine_learning/                # Modelos y utilidades de ML clásico
+│   ├── deep_learning/                   # Deep learning models and utilities
+│   ├── machine_learning/                # Classical ML models and utilities
 │   ├── train/
-│   │   ├── gridsearch.py                # Ejecuta búsquedas de hiperparámetros
-│   │   └── train_optimal_models.py      # Entrena modelos con los mejores hiperparámetros
-│   ├── utils/                           # Funciones auxiliares y utilidades
+│   │   ├── gridsearch.py                # Runs hyperparameter searches
+│   │   └── train_optimal_models.py      # Trains models with the best hyperparameters
+│   ├── utils/                           # Auxiliary functions and utilities
 │   │   ├── callback.py
 │   │   ├── class_weights.py
 │   │   ├── metrics.py
@@ -38,84 +41,90 @@ Accurate diagnosis of spitzoid tumors (ST) is critical to ensure a favorable pro
 │   │   ├── visualization_utils.py
 │   │   ├── remasker_utils.py
 │   │   ├── tablas_remasker.py
-│   │   ├── create_missing.ipynb         # Generación de bases con datos faltantes
-│   │   └── obtain_best_latent.py        # Obtención de mejor representación latente
-│   └── requirements.txt                 # Dependencias del proyecto
+│   │   ├── create_missing.ipynb         # Generation of datasets with missing data
+│   │   └── obtain_best_latent.py        # Extraction of the best latent representation
+│   └── requirements.txt                 # Project dependencies
 │
-├── results/                             # Resultados del gridsearch
-├── optim_results/                       # Resultados de los modelos óptimos
+├── results/                             # Grid search results
+├── optim_results/                       # Optimal model results
 
 ```
 
 ---
 
-## INSTALACIÓN Y USO
+## INSTALLATION AND USAGE
 
-### 1. Entorno de ejecución
+### 1. Runtime Environment
 
-El proyecto fue desarrollado y probado en el contenedor oficial de NVIDIA:
+The project was developed and tested in the official NVIDIA container:
 
-- Imagen Docker: nvcr.io/nvidia/pytorch:23.10-py3
+- Docker Image: nvcr.io/nvidia/pytorch:23.10-py3
 
-Puedes levantar el entorno con Docker, montar la carpeta del proyecto y acceder al contenedor para ejecutar los scripts.
+You can launch the environment with Docker, mount the project folder, and access the container to run the scripts.
 
-Instala las dependencias necesarias con:
+Install the required dependencies with:
 
     pip install -r requirements.txt
 
 ---
 
-### 2. GridSearch de modelos
+### 2. Model GridSearch
 
-Para ejecutar la búsqueda de hiperparámetros:
+To run the hyperparameter search:
 
     python gridsearch.py <modo>
 
-Modos disponibles:
-- autoencoder_classifier
-- classifier
-- remasker_classifier
-- ml_models (modelos clásicos sin datos faltantes)
-- ml_missing (modelos compatibles con datos faltantes)
+Available modes:
+- autoencoder_classifier  
+- classifier  
+- remasker_classifier  
+- ml_models (classical models without missing data)  
+- ml_missing (models compatible with missing data)  
 
-Ejemplo:
+Example:
 
     python gridsearch.py remasker_classifier
 
 ---
 
-### 3. Entrenamiento de los mejores modelos
+### 3. Training the Best Models
 
-Ejecuta el script correspondiente:
+Run the corresponding script:
 
     python train_optimal_models.py -m <modo>
 
-Ejemplo:
+Example:
 
     python train_optimal_models.py -m classifier
 
-Si no se incluye el modo, se ejecutan todos los modelos.
-Los scripts se ejecutan desde la carpeta en la que se encuentran.
+If no mode is specified, all models are executed.  
+Scripts must be run from the folder where they are located.
 
 ---
 
-## MODELOS UTILIZADOS
+## MODELS USED
 
 ### Deep Learning
-- Autoencoder + Clasificador
-- Clasificador
-- Remasker + Clasificador (con datos faltantes)
+- Autoencoder + Classifier  
+- Classifier  
+- ReMasker + Classifier (with missing data)  
 
 ### Machine Learning
 
-#### Sin datos faltantes:
-- Regresión Logística
-- K-Nearest Neighbors (KNN)
-- Support Vector Machine (SVM)
-- Random Forest
-- XGBoost
+#### Without missing data:
+- Logistic Regression  
+- K-Nearest Neighbors (KNN)  
+- Support Vector Machine (SVM)  
+- Random Forest  
+- XGBoost  
 
-#### Con datos faltantes:
-- CatBoost
-- XGBoost
-- HistGradientBoostingTrees
+#### With missing data:
+- CatBoost  
+- XGBoost  
+- HistGradientBoostingTrees  
+
+---
+
+The authors sincerely thank the researchers of the *ReMasker* method for sharing their code, available at: [https://github.com/tydusky/remasker](https://github.com/tydusky/remasker)
+
+
