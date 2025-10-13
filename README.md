@@ -15,7 +15,7 @@ Accurate diagnosis of spitzoid tumors (ST) is critical to ensure a favorable pro
 <a href="https://scholar.google.com/citations?user=jk4XsG0AAAAJ&hl=es" style="color:blue;">Valery Naranjo</a>, 
 <a href="https://scholar.google.com/citations?user=CPCZPNkAAAAJ&hl=es" style="color:blue;">Rocío del Amor</a>*
 
-📜 <span style="color:red"><em>Submitted to <a href="https://caseib.es/2025/" style="color:red;">CASEIB'25</a></em></span> 
+📜 <span style="color:red"><em>Accepted in <a href="https://caseib.es/2025/" style="color:red;">CASEIB'25</a></em></span> 
 
 
 ---
