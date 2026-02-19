@@ -136,3 +136,18 @@ Scripts must be run from the folder where they are located.
 
 The authors sincerely thank the researchers of the *ReMasker* method for sharing their code, available at: [https://github.com/tydusky/remasker](https://github.com/alps-lab/remasker)
 
+---
+
+## CITATION
+
+If you find this code or our methodology useful in your research, please consider citing our work:
+
+```bibtex
+@article{carretero2025masked,
+  title={Masked Autoencoder Joint Learning for Robust Spitzoid Tumor Classification},
+  author={Carretero, Il{\'a}n and Mahtani, Roshni and Perez-Deben, Silvia and Gonz{\'a}lez-Mu{\~n}oz, Jos{\'e} Francisco and Monteagudo, Carlos and Naranjo, Valery and del Amor, Roc{\'\i}o},
+  journal={arXiv preprint arXiv:2511.19535},
+  year={2025}
+}
+```
+
