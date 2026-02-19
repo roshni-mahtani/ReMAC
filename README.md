@@ -16,7 +16,8 @@ Accurate diagnosis of spitzoid tumors (ST) is critical to ensure a favorable pro
 <a href="https://scholar.google.com/citations?user=CPCZPNkAAAAJ&hl=es" style="color:blue;">Rocío del Amor</a>*
 
 📜 <span style="color:red"><em>Accepted in <a href="https://caseib.es/2025/" style="color:red;">CASEIB'25</a></em></span> 
-
+🔗 <span><em><a href="[https://arxiv.org/pdf/2412.04260](https://arxiv.org/pdf/2511.19535)" style="color:orange;">Masked Autoencoder Joint Learning for Robust Spitzoid Tumor
+Classification</a></em></span> 
 
 ---
 
